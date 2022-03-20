@@ -61,7 +61,7 @@
     <Compile Include="Assets/Scripts/SettingsMenu.cs" />
     <Compile Include="Assets/Scripts/AudioManager.cs" />
     <Compile Include="Assets/Scripts/ShopTrigger.cs" />
-    <Compile Include="Assets/ItemsDatabase.cs" />
+    <Compile Include="Assets/Scripts/ItemsDatabase.cs" />
     <Compile Include="Assets/Scripts/HealthBar.cs" />
     <Compile Include="Assets/Scripts/EnemyPatrol.cs" />
     <Compile Include="Assets/Scripts/PlayerHealth.cs" />
@@ -70,7 +70,7 @@
     <Compile Include="Assets/Scripts/Checkpoint.cs" />
     <Compile Include="Assets/Scripts/SellButtonItem.cs" />
     <Compile Include="Assets/Scripts/DialogueTrigger.cs" />
-    <Compile Include="Assets/cursor.cs" />
+    <Compile Include="Assets/Scripts/Cursor.cs" />
     <Compile Include="Assets/Scripts/LoadAndSaveData.cs" />
     <Compile Include="Assets/Scripts/PlayerEffects.cs" />
     <Compile Include="Assets/Scripts/LevelSelector.cs" />
@@ -82,7 +82,6 @@
     <Compile Include="Assets/Scripts/PickUpItem.cs" />
     <Compile Include="Assets/Scripts/Dialogue.cs" />
     <Compile Include="Assets/Scripts/PauseMenu.cs" />
-    <Compile Include="Assets/testObject.cs" />
     <Compile Include="Assets/Scripts/Credits.cs" />
     <Compile Include="Assets/Scripts/Chest.cs" />
     <Compile Include="Assets/Scripts/MainMenu.cs" />
@@ -91,6 +90,9 @@
     <Compile Include="Assets/Scripts/Item.cs" />
     <Compile Include="Assets/Scripts/ShopManager.cs" />
     <Compile Include="Assets/Scripts/DeathZone.cs" />
+    <Compile Include="Assets/Scripts/ForgeMiniGame.cs" />
+    <Compile Include="Assets/Scripts/RunRessourceMiniGame.cs" />
+    <Compile Include="Assets/Scripts/RunForgeMiniGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

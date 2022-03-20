@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{C6D060F0-6501-C48E-097F-492C98E4F2D6}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/cursor.cs">
+    <Files>
+      <File FileName="Assets/forgeMiniGame.cs" Line="36" Column="14" />
+      <File FileName="Assets/testObject.cs" Line="31" Column="6" />
+      <File FileName="Assets/RunForgeMiniGame.cs" Line="27" Column="37" />
+      <File FileName="Assets/cursor.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Forge-and-Mine" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True" />
+              <Node name="cursor.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a4fe7212-1aec-4b01-ade4-bf037853e00d" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
