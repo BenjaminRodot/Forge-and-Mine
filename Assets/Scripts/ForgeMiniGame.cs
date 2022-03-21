@@ -6,6 +6,7 @@ public class ForgeMiniGame : MonoBehaviour
 {
     private static bool start = false;
     private static bool end = false;
+    public GameObject forgeMiniGame;
 
 
     // Start is called before the first frame update
@@ -18,17 +19,15 @@ public class ForgeMiniGame : MonoBehaviour
     {
         if (end)
         {
-            GameObject RessourceMiniGame = GameObject.Find("ForgeMiniGame");
             Vector2 defaultPos = new Vector2(-4, -15);
-            RessourceMiniGame.transform.position = defaultPos;
+            forgeMiniGame.transform.position = defaultPos;
             RunForgeMiniGame.interact = false;
             end = false;
         }
         if (!RunForgeMiniGame.isInRange)
         {
-            GameObject RessourceMiniGame = GameObject.Find("ForgeMiniGame");
             Vector2 defaultPos = new Vector2(-4, -15);
-            RessourceMiniGame.transform.position = defaultPos;
+            forgeMiniGame.transform.position = defaultPos;
             RunForgeMiniGame.interact = false;
             end = false;
         }
@@ -39,7 +38,7 @@ public class ForgeMiniGame : MonoBehaviour
         
         if (start)
         {
-            if (gameObject.name.Equals("ShapeSword"))
+            if (gameObject.name.Equals("Shape"))
             {
                 start = false;
                 end = true;

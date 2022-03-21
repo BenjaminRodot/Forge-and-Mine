@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpawn
   - InteractUI
   - RessourceMiniGameUI
+  - ExplenationForgeUI
   layers:
   - Default
   - TransparentFX

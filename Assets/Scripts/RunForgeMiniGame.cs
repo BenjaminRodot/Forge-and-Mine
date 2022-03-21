@@ -9,6 +9,7 @@ public class RunForgeMiniGame : MonoBehaviour
     private Text interactUI;
     public static bool isInRange;
     public static bool interact = false;
+    public GameObject forgeMiniGame;
 
     void Awake()
     {
@@ -20,10 +21,10 @@ public class RunForgeMiniGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isInRange && !interact)
         {
             interact = true;
-            GameObject forgeMiniGame = GameObject.Find("ForgeMiniGame");
+            Debug.Log(forgeMiniGame);
             GameObject player = GameObject.Find("Player");
             Vector3 newPos = player.transform.position;
-            newPos.y = newPos.y + 3.5f;
+            newPos.y = newPos.y + 2.5f;
             newPos.x = newPos.x + 3.5f;
             newPos.z = 0;
             forgeMiniGame.transform.position = newPos;
