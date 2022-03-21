@@ -6,6 +6,10 @@ public class RunRessourceMiniGame : MonoBehaviour
     private Text interactUI;
     public static bool isInRange;
     public static bool interact = false;
+    public Item itemHarvestable;
+    public Item rareItemHarvestable;
+    public static Item currentItemHarvest;
+    public static Item currentRareItemHarvest;
 
     void Awake()
     {
@@ -19,13 +23,15 @@ public class RunRessourceMiniGame : MonoBehaviour
             interact=true;
             GameObject ressourceMiniGame = GameObject.Find("RessourceMiniGame");
             GameObject player = GameObject.Find("Player");
+            currentItemHarvest = itemHarvestable;
+            currentRareItemHarvest = rareItemHarvestable;
             Vector3 newPos  = player.transform.position;
             newPos.y = newPos.y + 1.5f;
             newPos.x = newPos.x + 0.8f;
             newPos.z = 0;
             interactUI.enabled = false;
             ressourceMiniGame.transform.position = newPos;
-            Text miniGameUI = GameObject.FindGameObjectWithTag("MiniGameUI").GetComponent<Text>();
+            Text miniGameUI = GameObject.FindGameObjectWithTag("RessourceMiniGameUI").GetComponent<Text>();
             miniGameUI.text="3    times    left";
         }
     }
@@ -45,6 +51,8 @@ public class RunRessourceMiniGame : MonoBehaviour
         {
             interactUI.enabled = false;
             isInRange = false;
+            currentItemHarvest = null;
+            currentRareItemHarvest = null;
         }
     }
 }

@@ -5114,7 +5114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78c9d1eec9c745dbbd792470673ebf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forgeMiniGame: {fileID: 918527298}
+  forgeMiniGame: {fileID: 127620144}
 --- !u!61 &1370294280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5720,6 +5720,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50df3eb87cb914e07b3ba1ae4c5935f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemHarvestable: {fileID: 11400000, guid: e600d36c0d8f84db9bd03ead5d086b90, type: 2}
+  rareItemHarvestable: {fileID: 11400000, guid: d22442315e75f4146b8eded5521cb5b3,
+    type: 2}
 --- !u!61 &1596061242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11550,7 +11553,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -15, y: -8, z: 0}
-  m_Size: {x: 45, y: 19, z: 1}
+  m_Size: {x: 51, y: 19, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -11677,8 +11680,14 @@ CompositeCollider2D:
     - - X: 299971076
         Y: -79992041
       - X: 299971076
+        Y: -49995096
+      - X: 299969943
+        Y: -49995096
+      - X: 299969884
+        Y: -49995037
+      - X: 299969884
         Y: -39994955
-      - X: 299971017
+      - X: 299969943
         Y: -39994896
       - X: 149984951
         Y: -39994896
@@ -11747,7 +11756,7 @@ CompositeCollider2D:
       - {x: -5.9994, y: -2.999606}
       - {x: -5.9993944, y: -7.9992}
     - - {x: 29.997097, y: -7.99921}
-      - {x: 29.997097, y: -3.9994895}
+      - {x: 29.996992, y: -3.9994895}
       - {x: 7.9992, y: -3.9995058}
       - {x: 7.9992056, y: -7.9992}
   m_VertexDistance: 0.0005

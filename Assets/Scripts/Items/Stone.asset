@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1fa38ad546c2f40a166d312e2cb939, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  id: 0
+  id: 10
   name: Stone
   description: Stone is the most common component you will find
   price: 0

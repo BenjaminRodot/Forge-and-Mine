@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -73,8 +74,26 @@ public class Cursor : MonoBehaviour
                 RunRessourceMiniGame.interact=false;
                 RessourceMiniGameUI.enabled = false;
                 compteur=4;
+                switch(score / 3)
+                {
+                    case 3:
+                        Inventory.instance.content.Add(RunRessourceMiniGame.currentRareItemHarvest);
+                        break;
+                    case 2:
+                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
+                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
+                        break;
+                    case 1:
+                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
+                        break;
+                }
+                     
                 Inventory.instance.AddCoins(score/3);
-                score=0;
+                var itemgroupByName = Inventory.instance.content.GroupBy(Item => Item.name);
+                foreach (var item in itemgroupByName)
+                    Debug.Log( item.Key +"    "+ item.Count());
+
+                score =0;
             }
             if(!RunRessourceMiniGame.isInRange)
             {

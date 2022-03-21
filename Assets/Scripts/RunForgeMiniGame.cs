@@ -10,6 +10,8 @@ public class RunForgeMiniGame : MonoBehaviour
     public static bool isInRange;
     public static bool interact = false;
     public GameObject forgeMiniGame;
+    //public Item itemNeededToForge;
+    //public int nbItemNeededToForge;
 
     void Awake()
     {
