@@ -5,8 +5,10 @@ using UnityEngine;
 public class ForgeMiniGame : MonoBehaviour
 {
     private static bool start = false;
-    private static bool end = false;
     public GameObject forgeMiniGame;
+    public Item forgedItem;
+    public Item itemNeededToForge;
+    public int nbItemNeededToForge;
 
 
     // Start is called before the first frame update
@@ -17,19 +19,11 @@ public class ForgeMiniGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (end)
-        {
-            Vector2 defaultPos = new Vector2(-4, -15);
-            forgeMiniGame.transform.position = defaultPos;
-            RunForgeMiniGame.interact = false;
-            end = false;
-        }
         if (!RunForgeMiniGame.isInRange)
         {
             Vector2 defaultPos = new Vector2(-4, -15);
             forgeMiniGame.transform.position = defaultPos;
             RunForgeMiniGame.interact = false;
-            end = false;
         }
     }
 
@@ -41,15 +35,24 @@ public class ForgeMiniGame : MonoBehaviour
             if (gameObject.name.Equals("Shape"))
             {
                 start = false;
-                end = true;
                 Debug.Log("Perdu !!!");
+                Vector2 defaultPos = new Vector2(-4, -15);
+                forgeMiniGame.transform.position = defaultPos;
+                RunForgeMiniGame.interact = false;
             }
 
             else if (gameObject.name.Equals("End"))
             {
                 start = false;
-                end = true;
+                Inventory.instance.content.Add(forgedItem);
+                for(int i = 0; i < nbItemNeededToForge; i++)
+                {
+                    Inventory.instance.content.Remove(itemNeededToForge);
+                }
                 Debug.Log("Gagne !!!");
+                Vector2 defaultPos = new Vector2(-4, -15);
+                forgeMiniGame.transform.position = defaultPos;
+                RunForgeMiniGame.interact = false;
             }
         }
         if(!start)

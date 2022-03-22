@@ -89,11 +89,17 @@ public class Cursor : MonoBehaviour
                 }
                      
                 Inventory.instance.AddCoins(score/3);
-                var itemgroupByName = Inventory.instance.content.GroupBy(Item => Item.name);
-                foreach (var item in itemgroupByName)
-                    Debug.Log( item.Key +"    "+ item.Count());
+                var itemgroupByName = Inventory.instance.content.Where(Item => Item.id==10).GroupBy(Item => Item.name);
+                if(itemgroupByName.Count()==0)
+                {
+                    Debug.Log("Stone" + "    " + 0);
+                }
+                else
+                {
+                    Debug.Log(itemgroupByName.First().Key + "    " + itemgroupByName.First().Count());
+                }
 
-                score =0;
+                score = 0;
             }
             if(!RunRessourceMiniGame.isInRange)
             {
