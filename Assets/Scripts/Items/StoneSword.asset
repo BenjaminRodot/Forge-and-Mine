@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1fa38ad546c2f40a166d312e2cb939, type: 3}
   m_Name: StoneSword
   m_EditorClassIdentifier: 
-  id: 0
-  name: 
+  id: 20
+  name: stoneSword
   description: 
   price: 0
   level: 0
