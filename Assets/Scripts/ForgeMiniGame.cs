@@ -10,10 +10,14 @@ public class ForgeMiniGame : MonoBehaviour
     public Item itemNeededToForge;
     public int nbItemNeededToForge;
 
+    public GameObject gameManager;
+    private InventoryMenu inventoryMenu;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        inventoryMenu = gameManager.GetComponent<InventoryMenu>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class ForgeMiniGame : MonoBehaviour
     {
         
         if (start)
-        {
+        {/*
             if (gameObject.name.Equals("Shape"))
             {
                 start = false;
@@ -41,14 +45,11 @@ public class ForgeMiniGame : MonoBehaviour
                 RunForgeMiniGame.interact = false;
             }
 
-            else if (gameObject.name.Equals("End"))
+            else */ if (gameObject.name.Equals("End") || gameObject.name.Equals("Shape"))
             {
                 start = false;
-                Inventory.instance.content.Add(forgedItem);
-                for(int i = 0; i < nbItemNeededToForge; i++)
-                {
-                    Inventory.instance.content.Remove(itemNeededToForge);
-                }
+                inventoryMenu.AddItem(forgedItem, 1);
+                inventoryMenu.RemoveItem(itemNeededToForge, nbItemNeededToForge);
                 Debug.Log("Gagne !!!");
                 Vector2 defaultPos = new Vector2(-4, -15);
                 forgeMiniGame.transform.position = defaultPos;

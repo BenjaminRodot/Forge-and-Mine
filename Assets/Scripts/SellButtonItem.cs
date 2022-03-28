@@ -16,7 +16,6 @@ public class SellButtonItem : MonoBehaviour
         if(inventory.coinsCount >= item.price)
         {
             inventory.content.Add(item);
-            inventory.UpdateInventoryUI();
             inventory.coinsCount -= item.price;
             inventory.UpdateTextUI();
         }

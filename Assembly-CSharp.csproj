@@ -56,8 +56,8 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/SaveLoad.cs" />
     <Compile Include="Assets/Scripts/LoadSpecificScene.cs" />
-    <Compile Include="Assets/Scripts/PickUpCoin.cs" />
     <Compile Include="Assets/Scripts/SettingsMenu.cs" />
     <Compile Include="Assets/Scripts/AudioManager.cs" />
     <Compile Include="Assets/Scripts/ShopTrigger.cs" />
@@ -77,10 +77,9 @@
     <Compile Include="Assets/Scripts/LevelSelector.cs" />
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/CameraFollow.cs" />
-    <Compile Include="Assets/Scripts/GameOverManager.cs" />
     <Compile Include="Assets/Scripts/Ladder.cs" />
     <Compile Include="Assets/Scripts/CurrentSceneManager.cs" />
-    <Compile Include="Assets/Scripts/PickUpItem.cs" />
+    <Compile Include="Assets/Scripts/Profil.cs" />
     <Compile Include="Assets/Scripts/Dialogue.cs" />
     <Compile Include="Assets/Scripts/RunForgeMiniGame.cs" />
     <Compile Include="Assets/Scripts/PauseMenu.cs" />
@@ -93,6 +92,7 @@
     <Compile Include="Assets/Scripts/Item.cs" />
     <Compile Include="Assets/Scripts/ShopManager.cs" />
     <Compile Include="Assets/Scripts/DeathZone.cs" />
+    <Compile Include="Assets/Scripts/InventoryMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -100,6 +100,7 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/data.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />

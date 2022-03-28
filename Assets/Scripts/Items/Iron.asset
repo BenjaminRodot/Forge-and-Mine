@@ -17,7 +17,4 @@ MonoBehaviour:
   description: 
   price: 0
   level: 2
-  image: {fileID: 0}
-  hpGiven: 0
-  speedGiven: 0
-  speedDuration: 0
+  image: {fileID: -4070099780964602867, guid: 57c6f1e467cda8a45845a46e32dd1ff6, type: 3}

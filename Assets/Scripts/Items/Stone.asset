@@ -17,7 +17,4 @@ MonoBehaviour:
   description: Stone is the most common component you will find
   price: 0
   level: 0
-  image: {fileID: 0}
-  hpGiven: 0
-  speedGiven: 0
-  speedDuration: 0
+  image: {fileID: -6838691355887088539, guid: 57c6f1e467cda8a45845a46e32dd1ff6, type: 3}

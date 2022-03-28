@@ -14,10 +14,14 @@ public class Cursor : MonoBehaviour
     private int score = 0;
     private Text RessourceMiniGameUI;
 
+    public GameObject gameManager;
+    private InventoryMenu inventoryMenu;
+
     // Start is called before the first frame update
     void Start()
     {
         RessourceMiniGameUI = GameObject.FindGameObjectWithTag("RessourceMiniGameUI").GetComponent<Text>();
+        inventoryMenu = gameManager.GetComponent<InventoryMenu>();
         Vector2 newPos  = new Vector2();
         newPos.x = Random.Range(minPos, maxPos);
         newPos.y = 0;
@@ -42,7 +46,12 @@ public class Cursor : MonoBehaviour
 
             if(Input.GetKeyDown(KeyCode.E) && compteur>0)
             {
-                if(transform.localPosition.x > -2.3 && transform.localPosition.x < -1.8)
+                if (compteur == 4)
+                {
+                    compteur--;
+                    RessourceMiniGameUI.text = compteur.ToString() + "    times    left";
+                }
+                else if(transform.localPosition.x > -2.3 && transform.localPosition.x < -1.8)
                 {
                     Debug.Log("Perfect +");
                     compteur--;
@@ -74,30 +83,23 @@ public class Cursor : MonoBehaviour
                 RunRessourceMiniGame.interact=false;
                 RessourceMiniGameUI.enabled = false;
                 compteur=4;
+                Debug.Log(score);
                 switch(score / 3)
                 {
                     case 3:
-                        Inventory.instance.content.Add(RunRessourceMiniGame.currentRareItemHarvest);
+                        Debug.Log("3");
+                        inventoryMenu.AddItem(RunRessourceMiniGame.currentRareItemHarvest, 1);
                         break;
                     case 2:
-                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
-                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
+                        Debug.Log("2");
+                        inventoryMenu.AddItem(RunRessourceMiniGame.currentItemHarvest, 2);
                         break;
                     case 1:
-                        Inventory.instance.content.Add(RunRessourceMiniGame.currentItemHarvest);
+                        Debug.Log("1");
+                        inventoryMenu.AddItem(RunRessourceMiniGame.currentItemHarvest, 1);
                         break;
                 }
-                     
-                Inventory.instance.AddCoins(score/3);
-                var itemgroupByName = Inventory.instance.content.Where(Item => Item.id==10).GroupBy(Item => Item.name);
-                if(itemgroupByName.Count()==0)
-                {
-                    Debug.Log("Stone" + "    " + 0);
-                }
-                else
-                {
-                    Debug.Log(itemgroupByName.First().Key + "    " + itemgroupByName.First().Count());
-                }
+                SaveLoad.Save();
 
                 score = 0;
             }

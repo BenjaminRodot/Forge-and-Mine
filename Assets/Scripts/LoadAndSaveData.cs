@@ -32,8 +32,6 @@ public class LoadAndSaveData : MonoBehaviour
                 Inventory.instance.content.Add(currentItem);
             }
         }
-
-        Inventory.instance.UpdateInventoryUI();
     }
 
     public void SaveData()

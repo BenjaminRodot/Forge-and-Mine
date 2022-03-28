@@ -14,24 +14,22 @@ public class RunForgeMiniGame : MonoBehaviour
     public Item itemNeededToForge;
     public int nbItemNeededToForge;
 
+    public GameObject gameManager;
+    private InventoryMenu inventoryMenu;
+
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+        inventoryMenu = gameManager.GetComponent<InventoryMenu>();
     }
 
     void Update()
     {
-        var listItemInventory = Inventory.instance.content.Where(Item => Item.id == itemNeededToForge.id).GroupBy(Item => Item.name);
-        int nbItemToForge = 0;
-        if (listItemInventory.Count() != 0)
-        {
-            nbItemToForge= listItemInventory.First().Count();
-        }
+
+        int nbItemToForge = inventoryMenu.GetNbItem(itemNeededToForge);
 
         if (Input.GetKeyDown(KeyCode.E) && isInRange && !interact && nbItemToForge>=nbItemNeededToForge)
         {
-            Debug.Log("Apres remove : " + Inventory.instance.content.Where(Item => Item.id == 10).GroupBy(Item => Item.name).First().Count());
-            Debug.Log("Sword : " + Inventory.instance.content.Where(Item => Item.id == 20).GroupBy(Item => Item.name).Count());
             interact = true;
             GameObject player = GameObject.Find("Player");
             Vector3 newPos = player.transform.position;

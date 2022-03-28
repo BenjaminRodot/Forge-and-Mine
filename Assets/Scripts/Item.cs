@@ -9,7 +9,4 @@ public class Item : ScriptableObject
     public int price;
     public int level;
     public Sprite image;
-    public int hpGiven;
-    public int speedGiven;
-    public float speedDuration;
 }
