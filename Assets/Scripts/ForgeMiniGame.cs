@@ -6,17 +6,16 @@ public class ForgeMiniGame : MonoBehaviour
 {
     private static bool start = false;
     public GameObject forgeMiniGame;
-    public Item forgedItem;
-    public Item itemNeededToForge;
-    public int nbItemNeededToForge;
+    public Weapon forgedItem;
 
-    public GameObject gameManager;
+    private GameObject gameManager;
     private InventoryMenu inventoryMenu;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         inventoryMenu = gameManager.GetComponent<InventoryMenu>();
     }
 
@@ -31,9 +30,9 @@ public class ForgeMiniGame : MonoBehaviour
         }
     }
 
-    void OnMouseOver()
+    void OnMouseEnter()
     {
-        
+
         if (start)
         {/*
             if (gameObject.name.Equals("Shape"))
@@ -49,7 +48,7 @@ public class ForgeMiniGame : MonoBehaviour
             {
                 start = false;
                 inventoryMenu.AddItem(forgedItem, 1);
-                inventoryMenu.RemoveItem(itemNeededToForge, nbItemNeededToForge);
+                inventoryMenu.RemoveItem(forgedItem.itemNeededToForge, forgedItem.nbItemNeededToForge);
                 Debug.Log("Gagne !!!");
                 Vector2 defaultPos = new Vector2(-4, -15);
                 forgeMiniGame.transform.position = defaultPos;
