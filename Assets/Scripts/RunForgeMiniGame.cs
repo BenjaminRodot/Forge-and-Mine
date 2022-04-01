@@ -10,33 +10,23 @@ public class RunForgeMiniGame : MonoBehaviour
     private Text interactUI;
     public static bool isInRange;
     public static bool interact = false;
-    public GameObject forgeMiniGame;
-    public Item itemNeededToForge;
-    public int nbItemNeededToForge;
-
-    public GameObject gameManager;
-    private InventoryMenu inventoryMenu;
+    private GameObject forgeScreen;
 
     void Awake()
     {
         interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
-        inventoryMenu = gameManager.GetComponent<InventoryMenu>();
+        forgeScreen = GameObject.Find("ForgeScreen");
+        forgeScreen.SetActive(false);
     }
 
     void Update()
     {
 
-        int nbItemToForge = inventoryMenu.GetNbItem(itemNeededToForge);
-
-        if (Input.GetKeyDown(KeyCode.E) && isInRange && !interact && nbItemToForge>=nbItemNeededToForge)
+        if (Input.GetKeyDown(KeyCode.E) && isInRange && !interact)
         {
+            Debug.Log("Test");
             interact = true;
-            GameObject player = GameObject.Find("Player");
-            Vector3 newPos = player.transform.position;
-            newPos.y = newPos.y + 2.5f;
-            newPos.x = newPos.x + 3.5f;
-            newPos.z = 0;
-            forgeMiniGame.transform.position = newPos;
+            forgeScreen.SetActive(true);
             interactUI.enabled = false;
         }
     }

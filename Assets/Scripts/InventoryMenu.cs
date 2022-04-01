@@ -96,7 +96,6 @@ public class InventoryMenu : MonoBehaviour
         {
             for (int i = 0; i < items.Count(); i++)
             {
-                Debug.Log(items[i]);
                 if (items[i] == item)
                 {
                     if(nbItems[i] >= nbItem)

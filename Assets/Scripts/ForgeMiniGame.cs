@@ -22,12 +22,14 @@ public class ForgeMiniGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!RunForgeMiniGame.isInRange)
         {
             Vector2 defaultPos = new Vector2(-4, -15);
             forgeMiniGame.transform.position = defaultPos;
             RunForgeMiniGame.interact = false;
         }
+        
     }
 
     void OnMouseEnter()
