@@ -12,8 +12,9 @@ public class ForgeSelectionButton : MonoBehaviour
         Text txt = GameObject.Find("ForgeText").GetComponent<Text>();
         txt.text = weapon.nbItemNeededToForge.ToString().ToUpper() + "x " + weapon.itemNeededToForge.name.ToUpper();
 
-        GameObject.Find("ForgeButton").GetComponent<ForgeMiniGame>().forgeMiniGame = GameObject.Find("ForgeMiniGame"+ weapon.typeOfWeapon);
-        GameObject.Find("ForgeButton").GetComponent<ForgeMiniGame>().forgedItem = weapon;
+        GameObject.Find("ForgeButton").GetComponent<ForgeButton>().forgeMiniGame = GameObject.Find("ForgeMiniGame"+ weapon.typeOfWeapon);
+        GameObject.Find("ForgeButton").GetComponent<ForgeButton>().itemNeededToForge = weapon.itemNeededToForge;
+        GameObject.Find("ForgeButton").GetComponent<ForgeButton>().nbItemNeededToForge = weapon.nbItemNeededToForge;
 
     }
 }

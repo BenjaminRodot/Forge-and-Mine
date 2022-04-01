@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{C6D060F0-6501-C48E-097F-492C98E4F2D6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RunForgeMiniGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ForgeButton.cs">
     <Files>
-      <File FileName="Assets/Scripts/ForgeMiniGame.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/ForgeSelectionButton.cs" Line="18" Column="6" />
-      <File FileName="Assets/Scripts/Weapon.cs" Line="6" Column="31" />
-      <File FileName="Assets/Scripts/RunForgeMiniGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ForgeMiniGame.cs" Line="34" Column="6" />
+      <File FileName="Assets/Scripts/ForgeSelectionButton.cs" Line="17" Column="122" />
+      <File FileName="Assets/Scripts/RunForgeMiniGame.cs" Line="20" Column="17" />
+      <File FileName="Assets/Scripts/ForgeButton.cs" Line="39" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +12,7 @@
           <Node name="Forge-and-Mine" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="RunForgeMiniGame.cs" selected="True" />
+                <Node name="ForgeButton.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -22,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2dcf4a6d-4bc8-443b-8bee-f2de23b375bb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8bb9df81-a246-45f5-a9e2-e2706cc7a8c4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
