@@ -1,0 +1,6 @@
+Copper
+5
+Iron
+2
+Stone
+14

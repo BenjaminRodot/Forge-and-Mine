@@ -45,6 +45,7 @@ public class RunForgeMiniGame : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             interactUI.enabled = false;
+            forgeScreen.SetActive(false);
             isInRange = false;
         }
     }

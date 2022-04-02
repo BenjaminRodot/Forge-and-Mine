@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class InventoryMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SaveLoad.Load();
         DisplayItems();
     }
 
@@ -26,10 +28,12 @@ public class InventoryMenu : MonoBehaviour
             if (gameIsPaused)
             {
                 Resume();
+                SaveLoad.Load();
             }
             else
             {
                 Paused();
+                SaveLoad.Save();
             }
         }
     }
@@ -50,7 +54,7 @@ public class InventoryMenu : MonoBehaviour
         gameIsPaused = false;
     }
 
-    private void DisplayItems()
+    public void DisplayItems()
     {
         for (int i = 0; i < items.Count(); i++)
         {

@@ -99,7 +99,7 @@ public class Cursor : MonoBehaviour
                         inventoryMenu.AddItem(RunRessourceMiniGame.currentItemHarvest, 1);
                         break;
                 }
-                SaveLoad.Save();
+                //SaveLoad.Save();
 
                 score = 0;
             }
