@@ -3,4 +3,10 @@ Copper
 Iron
 2
 Stone
-14
+11
+Stone Sword
+2
+Stone Spear
+1
+Stone Axe
+1

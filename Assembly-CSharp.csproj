@@ -83,6 +83,7 @@
     <Compile Include="Assets/Scripts/Profil.cs" />
     <Compile Include="Assets/Scripts/Dialogue.cs" />
     <Compile Include="Assets/Scripts/RunForgeMiniGame.cs" />
+    <Compile Include="Assets/Scripts/testListItem.cs" />
     <Compile Include="Assets/Scripts/PauseMenu.cs" />
     <Compile Include="Assets/Scripts/ForgeButton.cs" />
     <Compile Include="Assets/Scripts/Weapon.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="Assets/Scripts/ShopManager.cs" />
     <Compile Include="Assets/Scripts/ForgeSelectionButton.cs" />
     <Compile Include="Assets/Scripts/DeathZone.cs" />
-    <Compile Include="Assets/Scripts/testListItem.cs" />
+    <Compile Include="Assets/Scripts/ProfilSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

@@ -6,9 +6,15 @@ using UnityEngine;
 
 public class SaveLoad : MonoBehaviour
 {
-    public static Profil data = GameObject.Find("Profil").GetComponent<Profil>();
+    public static Profil data;
 
-    public static string file = "profil_2";
+    public static string file = "profil_1";
+
+    public void Start()
+    {
+        data = GameObject.Find("Profil").GetComponent<Profil>();
+    }
+
     public static void Save()
     {
         GameObject gameManager = GameObject.Find("GameManager");
@@ -51,7 +57,6 @@ public class SaveLoad : MonoBehaviour
                 inventoryMenu.nbItems.Add(int.Parse(jsonString));
             }
             
-            Debug.Log(jsonString);
 
             compteur++;
             

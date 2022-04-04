@@ -53,25 +53,25 @@ public class Cursor : MonoBehaviour
                 }
                 else if(transform.localPosition.x > -2.3 && transform.localPosition.x < -1.8)
                 {
-                    Debug.Log("Perfect +");
+                    //Debug.Log("Perfect +");
                     compteur--;
                     RessourceMiniGameUI.text=compteur.ToString()+"    times    left";
                     score+=3;
                 } else if(transform.localPosition.x > -3.3 && transform.localPosition.x < -0.7)
                 {
-                    Debug.Log("Perfect ");
+                    //Debug.Log("Perfect ");
                     compteur--;
                     RessourceMiniGameUI.text=compteur.ToString()+"    times    left";
                     score+=2;
                 } else if(transform.localPosition.x > -4.5 && transform.localPosition.x < 0.5)
                 {
-                    Debug.Log("Good");
+                    //Debug.Log("Good");
                     compteur--;
                     RessourceMiniGameUI.text=compteur.ToString()+"    times    left";
                     score+=1;
                 } else if(transform.localPosition.x > -6 && transform.localPosition.x < 2)
                 {
-                    Debug.Log("Fail");
+                    //Debug.Log("Fail");
                     compteur--;
                     RessourceMiniGameUI.text=compteur.ToString()+"    times    left";
                 }
@@ -83,23 +83,20 @@ public class Cursor : MonoBehaviour
                 RunRessourceMiniGame.interact=false;
                 RessourceMiniGameUI.enabled = false;
                 compteur=4;
-                Debug.Log(score);
+                //Debug.Log(score);
                 switch(score / 3)
                 {
                     case 3:
-                        Debug.Log("3");
                         inventoryMenu.AddItem(RunRessourceMiniGame.currentRareItemHarvest, 1);
                         break;
                     case 2:
-                        Debug.Log("2");
                         inventoryMenu.AddItem(RunRessourceMiniGame.currentItemHarvest, 2);
                         break;
                     case 1:
-                        Debug.Log("1");
                         inventoryMenu.AddItem(RunRessourceMiniGame.currentItemHarvest, 1);
                         break;
                 }
-                //SaveLoad.Save();
+                SaveLoad.Save();
 
                 score = 0;
             }

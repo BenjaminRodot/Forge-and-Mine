@@ -1,2 +1,4 @@
 Stone
-4
+8
+Stone Sword
+1

@@ -521,7 +521,7 @@ MonoBehaviour:
     SOUND  EFFECTS  LIBRARY\r\n<I>BY  LITTLE  ROBOT  SOUND  FACTORY</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
     FONT -</SIZE>\r\n\r\n<SIZE=60>PIXELATED\r\n<I>BY  SKYLAR  PARK</I></SIZE>\r\n\r\n\r\n\r\n<SIZE=120>-
     SPECIAL  THANKS -</SIZE>\r\n\r\n<SIZE=60>FRIENDS\r\n\r\n<I>JUDITH RODOT, CELIA
-    DENIVET</I></SIZE>\r"
+    DENIVET</I>\n<I>\"C'est   loud   !\"</I></SIZE>\r"
 --- !u!222 &2021327300
 CanvasRenderer:
   m_ObjectHideFlags: 0

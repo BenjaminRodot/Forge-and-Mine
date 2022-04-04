@@ -24,7 +24,6 @@ public class RunForgeMiniGame : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isInRange && !interact)
         {
-            Debug.Log("Test");
             interact = true;
             forgeScreen.SetActive(true);
             interactUI.enabled = false;

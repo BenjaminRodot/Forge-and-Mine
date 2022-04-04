@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{C6D060F0-6501-C48E-097F-492C98E4F2D6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SaveLoad.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Cursor.cs">
     <Files>
-      <File FileName="Assets/Scripts/InventoryMenu.cs" Line="21" Column="24" />
-      <File FileName="Assets/Scripts/Weapon.cs" Line="6" Column="5" />
-      <File FileName="Assets/Scripts/SaveLoad.cs" Line="11" Column="42" />
-      <File FileName="Assets/Scripts/ForgeSelectionButton.cs" Line="25" Column="68" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="12" Column="39" />
+      <File FileName="Assets/Scripts/SaveLoad.cs" Line="59" Column="13" />
+      <File FileName="Assets/Scripts/ProfilSelector.cs" Line="12" Column="100" />
+      <File FileName="Assets/Scripts/LevelSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InventoryMenu.cs" Line="65" Column="90" />
+      <File FileName="Assets/Scripts/RunForgeMiniGame.cs" Line="30" Column="10" />
+      <File FileName="Assets/Scripts/Cursor.cs" Line="74" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,7 @@
             <Node name="Assets" expanded="True">
               <Node name="ProfilData" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="SaveLoad.cs" selected="True" />
+                <Node name="Cursor.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1599db6-3296-4236-a1e9-abb849feec26" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3af1675e-a6ed-4c84-a45d-77600d2f7b93" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
