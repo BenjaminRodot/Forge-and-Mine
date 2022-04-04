@@ -3,7 +3,7 @@ Copper
 Iron
 2
 Stone
-11
+13
 Stone Sword
 2
 Stone Spear
